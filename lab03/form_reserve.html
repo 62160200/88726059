@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <title>Hotel Booking</title>
+ <link rel="stylesheet" type="text/css" href="css/mystyle.css">
+</head>
+<body>
+ <h3>Hotel Booking</h3>
+ <table border="0">
+ <form method="POST" action="https://angsila.cs.buu.ac.th/~wittawas/632/88726059/lab02/afile.php">
+ <tr>
+    <td><label for="name">Room type</label></td>
+    <td colspan="2">
+        <select name="roomtype">
+        <option value="0">Please Select&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</option>
+        <option value="Standard">Standard</option>
+        <option value="Luxury">Luxury</option>
+        <option value="Deluxe">Deluxe</option>
+        </select>
+    </td>
+ </tr>
+ <tr>  
+    <td><label for="passwd">Number of Guests</label></td>
+    <td colspan="2"><select name="numguest">
+        <option value="0">Please Select&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;&emsp;</option>
+        <option value="1-2">1-2</option>
+        <option value="3-4">3-4</option>
+        <option value="5-6">5-6</option>
+        <option value="7-8">7-8</option>
+        </select>
+    </td>
+ </tr>
+ <tr>
+    <td><label for="name">Name</label></td>
+    <td><input type="text" name="fame" id="fame"  value="First"></td>
+    <td><input type="text" name="lname" id="lname" value="Last"></td>
+ </tr>
+ <tr>
+    <td><label for="email">Email</label></td>
+    <td colspan="2"><input type="text" name="email" id="email" size="48" value="john@company.com"></td>
+ </tr>
+ <tr>
+    <td><label for="arrival">Arrival</label></td>
+    <td><input type="date" id="arrivaldate" name="arrivaldate"></td>
+    <td><input type="time" id="arrivaltime" name="arrivaltime"></td>
+ </tr>
+ <tr>
+    <td><label for="name">Departime</label></td>
+    <td><input type="date" id="name" name="departimedate"></td>
+    <td><input type="time" id="name" name="departimetime"></td>
+ </tr>
+ <tr>
+    <td><label for="pickup">Free Pickup</label></td>
+    <td><input type="radio" name="pickup" id="pickup" value="Yes">Yes, Sure!<br>
+    <input type="radio" name="pickup" id="pickup" value="No">No, I already rented a car.</td>
+ </tr>
+ <tr>
+    <td><label for="flightnum">Flightnum</label></td>
+    <td colspan="2"><input type="text" name="flightnum" id="flightnum" size="48" value="C1209"></td>
+ </tr>
+ <tr>
+ <tr>
+    <td><label for="otherreq">Other requests</label></td>
+    <td colspan="2"><Textarea name="commmet" id="comment" rows="5" cols="50"></Textarea></td>
+ </tr>
+ <tr>
+    <td colspan="3">
+    <center>
+        <input type="submit" value="Complete Reservation">
+    </center>
+    </td>
+ </tr>
+ </form>
+ </table>
+    
+</body>
+<button><a href="main.html">ย้อนกลับ</a></button>
+</html>
