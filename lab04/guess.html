@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<style>
+
+body {
+	margin: 10px;
+	background-color: #cccccc;
+	font-family: Arial, sans-serif;
+}
+
+.button {
+	margin-top: 10px;
+	border-radius: 10px;
+	border-color: #000000;
+	border-style: solid;
+	border-width: 1px;
+	width: 20%;
+	padding: 5px;
+	text-align: center;
+	font-weight: bold;
+}
+
+#historyArea {
+	margin-top: 10px;
+	padding-left: 5px;
+	padding-right: 5px;
+}
+
+#game {
+	background-color: #ffffff;
+	border-radius: 10px;
+	border-style: solid;
+	border-width: 3px;
+	border-color: #cccccc;
+	padding: 10px;
+}
+
+#statusArea {
+	font-size: 120%;
+}
+
+#footerArea {
+	text-align: center;
+	margin-top:5px;
+	font-size: 90%;
+	font-style: italic;
+}
+        </style>
+<head>
+    
+    <meta charset="utf-8"> 
+    <title>เกมทายตัวเลข</title> 
+
+
+</head>
+    <body>
+        <div>
+        <h1>ทายตัวเลข</h1> 
+        <div id="statusArea">
+            <p>ทายตัวเลข 1 - 100</p>
+        </div> 
+        
+        <input type="text" placeholder="?" id="number">
+        <button onclick="guess()" class="button">Guess</button>
+        <div id="hist"></div>
+        <div id="result"></div>
+        <button onclick="starover()">Star Over</button>
+        </div>
+    </body>
+
+<script>
+            rn = Math.floor(Math.random() * 100);
+            //document.write(rn);
+            function guess(){
+                num = document.getElementById("number")
+                hist = document.getElementById("hist")
+                result = document.getElementById("result")
+
+                hist.innerHTML += num.value + " "
+
+                if(parseInt(num.value) == rn){
+                    result.innerHTML = "ถูกต้อง"
+                }
+                else if (parseInt(num.value) < rn) {
+                    result.innerHTML = "น้อยไป"
+                }
+                else if (parseInt(num.value) > rn) {
+                    result.innerHTML = "มากไป"
+                }
+            }
+            function starover(){
+                num = document.getElementById("number").innerHTML=""
+                hist = document.getElementById("hist").innerHTML=""
+                result = document.getElementById("result").innerHTML=""
+                rn = Math.floor(Math.random() * 100);
+            }
+        </script>
