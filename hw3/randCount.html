@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html align=center>
+    <head>
+        <title>RandomCount</title>
+        <link rel="stylesheet" type="text/css" href="css/mystyle.css">
+        <h2>โปรแกรม สุ่มตัวเลข 0-99 </h2>
+        <script>
+        function random(){
+            num = number.value;
+            div = document.getElementById('disp')
+        
+            div.innerHTML = ''
+
+            numbers = []
+            for (i = 1; i <= num; i++) {
+                rn = Math.floor(Math.random() * 100)
+                numbers.push(rn)
+            }
+            numbers.sort((a, b) => a - b)
+            count = 1
+            table = ``
+
+            for (i = 1; i <= numbers.length; i++) {
+                if (numbers[i] == numbers[i - 1]) {
+                    count++
+                }
+                else {
+                    table += `<tr>
+                                <th>${numbers[i - 1]}</th>
+                                <th>${count}</th>
+                            </tr>`
+                    count = 1
+                }
+            }
+            div.innerHTML = table
+        }
+        </script>
+    </head>
+
+        
+<body>
+    <input type="text" placeholder="ป้อนจำนวนครั้งที่จะสุ่ม" id="number">
+    <button onclick="random()">สุ่ม</button>
+
+    <table align=center>
+        <thead>
+            <tr>
+                <th>ตัวเลข</th>
+                <th>ถูกสุ่ม(ครั้ง)</th>
+            </tr>
+        </thead>
+
+    <tbody id="disp">
+
+    </tbody>
+    </table>
+</body>
+ 
+</html>

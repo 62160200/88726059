@@ -1,0 +1,23 @@
+body {
+    background-color: rgb(251, 244, 240);
+}
+h2{
+    color: rgb(68, 61, 61);
+}
+@font-face {
+    font-family: 'myFirstFont';
+    src:url('Itim-Regular.ttf') format('truetype');
+
+}
+ * {
+    font-family: myFirstFont;
+ }
+ html { 
+    background: url(astronomy.jpg) no-repeat center fixed; 
+    background-size: cover;
+  }
+  table {
+    width: 20%;
+    border-collapse: collapse;
+    border: 1px solid black;
+  }
