@@ -4,24 +4,31 @@
         <link rel="stylesheet" type="text/css" href="css/mystyle.css">
         <title>Multi</title>
         <h2>โปรแกรมสูตรคูณ</h2>
-        <script>
+    <script>
         function multi(n) {
             div = document.getElementById('disp')
-            div.innerHTML = ""
-        for (i = 1; i <= 12; i++) {
-            div.innerHTML += n + "x" + i + "=" + (n * i) + "<br>"
+            div.innerHTML = ''
+            table = ``
+
+            for (i = 1; i <= 12; i++) {
+                table += `<tr>
+                            <td>${n} x ${i} = </td>
+                            <td>${n*i}</td>
+                        </tr>`
+                
         }
+        div.innerHTML = table
     }
     
-</script>
+    </script>
     </head>
     <body align=center>
         <input type="text" placeholder="สูตรคูณแม่ X" onkeyup="multi(this.value);">
-        <div id="disp">แสดงแม่สูตรคูณ</div>
+        <table border="1" align=center>
+        <tbody id="disp">
+    
+        </tbody>
+        </table>
     </body>
     
 </html>
-
-    
-
-
