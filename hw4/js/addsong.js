@@ -1,8 +1,12 @@
-
-function addsong(){
-    songs = localStorage.getItem('songs');
-  
+var songs = JSON.parse(localStorage.getItem("songs"))
         if(songs == null){
+            localStorage.setItem("songs",songs)
+            songs = [];
+        }
+function addsong(){
+
+    songs = localStorage.getItem('songs');
+        if(songs == 'null'){
             songs = [];
         }else{
             songs = JSON.parse(songs);
@@ -12,7 +16,7 @@ function addsong(){
             artist = document.getElementById('artist').value,
             lyrics = document.getElementById('lyrics').value
         ];
-            songs.push(data);
+            songs.push(data);      
         console.log(songs);
         localStorage.setItem('songs',JSON.stringify(songs));
 
@@ -24,3 +28,5 @@ function clearform() {
     document.getElementById('artist').value = ''
     document.getElementById('lyrics').value = ''
   }
+
+  
